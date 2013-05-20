@@ -1,0 +1,146 @@
+/*-----------------------------------------------------------------------------------------------*/
+/* Rounded box if for rounded rectangle framed areas */
+.roundedBox
+{
+	width: 100%;
+}
+.roundedBox .header
+{
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: bold;
+	color: #666;
+}
+/* table header w/ header */
+.roundedBox .table_header_top_left
+{
+	background-image: url(../../images/UI/RoundedBox/table_header_top_left.png);
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_top_left.gif);
+	background-repeat: no-repeat;
+}
+.roundedBox .table_header_top_center
+{
+	background-image: url(../../images/UI/RoundedBox/table_header_top_center.png);
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_top_center.gif);
+	background-repeat: repeat-x;
+}
+.roundedBox .table_header_top_right
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_top_right.gif);
+	background-image: url(../../images/UI/RoundedBox/table_header_top_right.png);
+	background-repeat: no-repeat;
+}
+.roundedBox .table_header_middle_left
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_middle_left.gif);
+	background-image: url(../../images/UI/RoundedBox/table_header_middle_left.png);
+	background-repeat: no-repeat;
+}
+.roundedBox .table_header_middle_center
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_middle_center.gif);
+	background-image: url(../../images/UI/RoundedBox/table_header_middle_center.png);
+	background-repeat: repeat-x;
+}
+.roundedBox .table_header_middle_right
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_middle_right.gif);
+	background-image: url(../../images/UI/RoundedBox/table_header_middle_right.png);
+	background-repeat: no-repeat;
+}
+.roundedBox .table_header_bottom_left
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_bottom_left.gif);
+	background-image: url(../../images/UI/RoundedBox/table_header_bottom_left.png);
+	background-repeat: no-repeat;
+}
+.roundedBox .table_header_bottom_center
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_bottom_center.gif);
+	background-image: url(../../images/UI/RoundedBox/table_header_bottom_center.png);
+	background-repeat: repeat-x;
+}
+.roundedBox .table_header_bottom_right
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_header_bottom_right.gif);
+	background-image: url(../../images/UI/RoundedBox/table_header_bottom_right.png);
+	background-repeat: no-repeat;
+}
+/* end of table top w/ header */
+
+/* table top /wo header) */
+.roundedBox .table_top_left
+{
+	height: 15px;
+	width: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_top_left.gif);
+	background-image: url(../../images/UI/RoundedBox/table_top_left.png);
+	background-repeat: no-repeat;
+}
+.roundedBox .table_top_center
+{
+	height: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_top_center.gif);
+	background-image: url(../../images/UI/RoundedBox/table_top_center.png);
+	background-repeat: repeat-x;
+}
+.roundedBox .table_top_right
+{
+	height: 15px;
+	width: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_top_right.gif);
+	background-image: url(../../images/UI/RoundedBox/table_top_right.png);
+	background-repeat: no-repeat;
+}
+/* end of table top /wo header */
+
+/* table middle */
+.roundedBox .table_middle_left
+{
+	width: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_middle_left.gif);
+	background-image: url(../../images/UI/RoundedBox/table_middle_left.png);
+	background-repeat: repeat-y;
+}
+.roundedBox .table_middle_center
+{
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_middle_center.gif);
+	background-image: url(../../images/UI/RoundedBox/table_middle_center.png);
+	background-repeat: repeat;
+}
+.roundedBox .table_middle_right
+{
+	width: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_middle_right.gif);
+	background-image: url(../../images/UI/RoundedBox/table_middle_right.png);
+	background-repeat: repeat-y;
+}
+/* end of table middle */
+
+/* table bottom */
+.roundedBox .table_bottom_left
+{
+	height: 15px;
+	width: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_bottom_left.gif);
+	background-image: url(../../images/UI/RoundedBox/table_bottom_left.png);
+	background-repeat: no-repeat;
+}
+.roundedBox .table_bottom_center
+{
+	height: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_bottom_center.gif);
+	background-image: url(../../images/UI/RoundedBox/table_bottom_center.png);
+	background-repeat: repeat-x;
+}
+.roundedBox .table_bottom_right
+{
+	height: 15px;
+	width: 15px;
+	[if IE 6] background-image: url(../../images/UI/RoundedBox/table_bottom_right.gif);
+	background-image: url(../../images/UI/RoundedBox/table_bottom_right.png);
+	background-repeat: repeat-x;
+}
+/* end of table bottom */
+
+/* End of rounded box */

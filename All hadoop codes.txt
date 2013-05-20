@@ -1,0 +1,288 @@
+create table seg_store_1_categ_spend
+as
+select a.seg_id, a.avg_spend  bakery_spend, 
+b.avg_spend  deli_spend, c.avg_spend  wine_spend, d.avg_spend  beer_spend
+from seg_store_1_bakery_total_spend a join  seg_store_1_deli_total_spend b join  
+seg_store_1_wine_total_spend c join  seg_store_1_beer_total_spend d
+where
+a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+group by a.seg_id
+
+------------store 2---------------
+create table seg_store_2_num_hhld
+as
+select seg_id, count(distinct household_num) as hhld_cnt
+from rdt
+where store = 2
+and distance <=10
+group by seg_id
+
+create table seg_store_2_bakery_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_2_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'BAKERY'
+and a.store = 2
+and distance <= 10
+group by a.seg_id
+
+create table seg_store_2_deli_total_spend
+as
+select seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a union seg_store_2_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'DELI'
+and distance <= 10
+and a.store = 2
+group by a.seg_id
+
+create table seg_store_2_wine_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_2_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'WINE'
+and distance <= 10
+and a.store = 2
+group by a.seg_id
+
+
+create table seg_store_2_beer_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_2_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'BEER'
+and distance <= 10
+and a.store = 2
+group by a.seg_id
+
+
+create table seg_store_2_categ_spend
+as
+select a.seg_id, avg(a.avg_spend)  bakery_spend, 
+avg(b.avg_spend)  deli_spend, avg(c.avg_spend)  wine_spend, avg(d.avg_spend)  beer_spend
+from seg_store_2_bakery_total_spend a join seg_store_2_deli_total_spend b join 
+seg_store_2_wine_total_spend c join seg_store_2_beer_total_spend d
+where
+a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+group by a.seg_id
+
+----------------------------store 3-----------------------
+
+create table seg_store_3_num_hhld
+as
+select a.seg_id, count(distinct household_num)  hhld_cnt
+from rdt a
+where store = 3
+and distance <=10
+group by a.seg_id
+
+
+create table seg_store_3_bakery_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_3_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'BAKERY'
+and a.store = 3
+and distance <= 10
+group by a.seg_id
+
+
+create table seg_store_3_deli_total_spend
+
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_3_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'DELI'
+and distance <= 10
+and a.store = 3
+group by a.seg_id
+
+
+create table seg_store_3_wine_total_spend
+
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_3_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'WINE'
+and distance <= 10
+and a.store = 3
+group by a.seg_id
+
+create table seg_store_3_beer_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_3_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'BEER'
+and distance <= 10
+and a.store = 3
+group by a.seg_id
+
+create table seg_store_3_categ_spend
+as
+select a.seg_id, avg(a.avg_spend)  bakery_spend, 
+avg(b.avg_spend)  deli_spend, avg(c.avg_spend)  wine_spend, avg(d.avg_spend)  beer_spend
+from seg_store_3_bakery_total_spend a join seg_store_3_deli_total_spend b join 
+seg_store_3_wine_total_spend c join seg_store_3_beer_total_spend d
+where
+a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+group by a.seg_id
+
+------------------store 4----------------
+create table seg_store_4_num_hhld
+
+select a.seg_id, count(distinct household_num)  hhld_cnt
+from rdt a
+where store = 4
+and distance <=10
+group by a.seg_id
+
+create table seg_store_4_bakery_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_4_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'BAKERY'
+and a.store = 4
+and distance <= 10
+group by a.seg_id
+
+create table seg_store_4_deli_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_4_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'DELI'
+and distance <= 10
+and a.store = 4
+group by a.seg_id
+
+create table seg_store_4_wine_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_4_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'WINE'
+and distance <= 10
+and a.store = 4
+group by a.seg_id
+
+create table seg_store_4_beer_total_spend
+as
+select a.seg_id, sum(net_sales)/avg(hhld_cnt)  avg_spend
+from rdt a join seg_store_4_num_hhld b
+where a.seg_id = b.seg_id
+and trim(a.description) = 'BEER'
+and distance <= 10
+and a.store = 4
+group by a.seg_id
+
+
+create table seg_store_4_categ_spend
+as
+select a.seg_id, avg(a.avg_spend)  bakery_spend, 
+avg(b.avg_spend)  deli_spend, avg(c.avg_spend)  wine_spend, avg(d.avg_spend)  beer_spend
+from seg_store_4_bakery_total_spend a join seg_store_4_deli_total_spend b join 
+seg_store_4_wine_total_spend c join seg_store_4_beer_total_spend d
+where
+a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+group by a.seg_id
+
+
+create table seg_id_cnt
+as 
+select seg_id, count(*) from 
+rdt
+where distance <= 10
+group by seg_id
+
+select store, trim(description) as category, sum(net_sales)
+from rdt
+group by store, trim(description)
+
+-------------------------calculate maximum------------------------
+
+create table seg_bakery_max
+
+select a.seg_id, max(a.bakery_spend, b.bakery_spend, c.bakery_spend, d.bakery_spend)  max_bakery
+from seg_store_1_categ_spend a, seg_store_2_categ_spend b, seg_store_3_categ_spend c, 
+seg_store_4_categ_spend d
+where a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+
+create table seg_deli_max
+
+select a.seg_id, max(a.deli_spend, b.deli_spend, c.deli_spend, d.deli_spend)  max_deli
+from seg_store_1_categ_spend a, seg_store_2_categ_spend b, seg_store_3_categ_spend c, 
+seg_store_4_categ_spend d
+where a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+
+create table seg_wine_max
+
+select a.seg_id, max(a.wine_spend, b.wine_spend, c.wine_spend, d.wine_spend)  max_wine
+from seg_store_1_categ_spend a, seg_store_2_categ_spend b, seg_store_3_categ_spend c, 
+seg_store_4_categ_spend d
+where a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+
+create table seg_beer_max
+
+select a.seg_id, max(a.beer_spend, b.beer_spend, c.beer_spend, d.beer_spend)  max_beer
+from seg_store_1_categ_spend a, seg_store_2_categ_spend b, seg_store_3_categ_spend c, 
+seg_store_4_categ_spend d
+where a.seg_id = b.seg_id
+and a.seg_id = c.seg_id
+and a.seg_id = d.seg_id
+
+-------------------calculate potential-------------------------------
+create table store_1_potential
+select a.seg_id, 
+b.max_bakery - a.bakery_spend  bakery_potential, b.max_bakery,
+b.max_deli - a.deli_spend  deli_potential, b.max_deli,
+b.max_wine - a.wine_spend  wine_potential, b.max_wine,
+b.max_beer - a.beer_spend  beer_potential, b.max_beer,
+from seg_store_1_categ_spend a, seg_bakery_max b
+where a.seg_id = b.seg_id
+
+create table store_2_potential
+select a.seg_id, 
+b.max_bakery - a.bakery_spend  bakery_potential, b.max_bakery,
+b.max_deli - a.deli_spend  deli_potential, b.max_deli,
+b.max_wine - a.wine_spend  wine_potential, b.max_wine,
+b.max_beer - a.beer_spend  beer_potential, b.max_beer,
+from seg_store_2_categ_spend a, seg_bakery_max b
+where a.seg_id = b.seg_id
+
+create table store_3_potential
+select a.seg_id, 
+b.max_bakery - a.bakery_spend  bakery_potential, b.max_bakery,
+b.max_deli - a.deli_spend  deli_potential, b.max_deli,
+b.max_wine - a.wine_spend  wine_potential, b.max_wine,
+b.max_beer - a.beer_spend  beer_potential, b.max_beer,
+from seg_store_3_categ_spend a, seg_bakery_max b
+where a.seg_id = b.seg_id
+
+create table store_4_potential
+select a.seg_id, 
+b.max_bakery - a.bakery_spend  bakery_potential, b.max_bakery,
+b.max_deli - a.deli_spend  deli_potential, b.max_deli,
+b.max_wine - a.wine_spend  wine_potential, b.max_wine,
+b.max_beer - a.beer_spend  beer_potential, b.max_beer,
+from seg_store_4_categ_spend a, seg_bakery_max b
+where a.seg_id = b.seg_id

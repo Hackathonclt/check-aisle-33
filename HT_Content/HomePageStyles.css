@@ -1,0 +1,579 @@
+/* { margin:0; padding:0; } */
+html
+{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background-color: #ffffff;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+form
+{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a:link
+{
+	color: #00803B;
+	text-decoration: none;
+}
+a:visited
+{
+	text-decoration: none;
+	color: #00803B;
+}
+a:hover
+{
+	text-decoration: underline;
+	color: #00803B;
+}
+a:active
+{
+	text-decoration: none;
+	color: #00803B;
+}
+
+.errorMsg
+{
+	color: Red;
+}
+
+.pickerWrapper_Default
+{
+	float: left;
+	padding-bottom: 3px;
+	padding-top: 1px;
+}
+
+
+.bodyCopy, .copy, .body, .wineboycopy, legend, table.bodycopy
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #505050;
+}
+
+.required
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #8b0000;
+}
+
+.headerNav
+{
+	font-family: Georgia, Times New Roman, Times;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	vertical-align: middle;
+	color: #258250; /*text-indent:10px; */
+	cursor: hand;
+	pointer: hand;
+}
+
+
+.headerNav:hover
+{
+	font-family: Georgia, Times New Roman, Times;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	color: #BE2520;
+}
+
+.topMenuGroup
+{
+	background-color: Transparent;
+}
+
+.menuGroup
+{
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+	background-color: white;
+	border: solid 1px #737373;
+}
+
+.headerNav1
+{
+	font-family: Verdana, arial;
+	font-size: 10px;
+	font-weight: bold;
+	background-color: #E3EFE3;
+	color: #226a22;
+	text-decoration: none;
+	margin-left: 2px;
+	padding: 5px;
+	cursor: hand;
+}
+
+
+.headerNav1:hover
+{
+	font-family: Verdana, arial;
+	font-size: 10px;
+	font-weight: bold;
+	background-color: #E6E9D4;
+	color: #226a22;
+	text-decoration: underline;
+	margin-left: 2px;
+	padding: 5px;
+	cursor: hand;
+}
+
+.pageTitle, h1
+{
+	font-family: Verdana, Arial, Tahoma, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #323232;
+	/*vertical-align: middle;*/
+	text-align: left;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+h2
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #00803B;
+	vertical-align: middle;
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+h3
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #00803B;
+	vertical-align: middle;
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+.highlight
+{
+	color: #00803B;
+	font-weight: bolder;
+}
+
+.tie_info_header
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #00803B;
+	vertical-align: middle;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.Video_links,
+.Video_links A:link
+{
+	color: #626365;
+	font-size: 9.5pt;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+.Video_links_playing
+{
+	font-weight: bold;
+	font-size: 9.5pt;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+.textfield
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #444444;
+	text-decoration: none;
+}
+.checkbox
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #444444;
+	text-decoration: none;
+}
+.formbutton
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #1B3862;
+}
+.bigbutton
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #086F12;
+}
+.dropdown
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #444444;
+	text-decoration: none;
+}
+.radiobutton
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #444444;
+	text-decoration: none;
+}
+.formtext
+{
+	text-align: right;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #444444;
+	text-decoration: none;
+}
+.required
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: red;
+	text-decoration: none;
+}
+.example
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #444444;
+	text-decoration: none;
+}
+.formsection
+{
+	border: 1px solid gray;
+}
+.formsectiontitle
+{
+	position: relative;
+	top: 0px;
+	left: 2px;
+	right: 15px;
+	text-align: center;
+	padding: 3px;
+	background-color: #FFFFFF;
+	font-family: Trebuchet MS, Verdana, arial;
+	font-size: 11px;
+	font-weight: bold;
+	color: #444444;
+}
+
+select.cart
+{
+	height: 10px;
+}
+
+/* styles to help support proper printing */
+table#content
+{
+	width: 975px;
+}
+span.print
+{
+	display: none;
+}
+td#rightCol
+{
+	width: 750px;
+}
+td#sideNav
+{
+	background-color: #E5E5E5;
+}
+td#footer
+{
+	background-color: #EBEBEB;
+}
+
+/* styles related to shopping (patio specifically ATM) */
+table#shopping td.top
+{
+	border-top: solid 1px silver;
+	padding-top: 6px;
+}
+
+table#shopping td.bottom
+{
+	border-bottom: solid 1px silver;
+	padding-bottom: 6px;
+}
+
+table#shopping table#cart, td.cart
+{
+	color: #00803B;
+}
+
+table#social td
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#container
+{
+	/*border: dotted 1px purple;*/
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+}
+#header
+{
+	width: 100%;
+	background-color: #fff;
+}
+#header #logo
+{
+	/*border: dotted 1px orange;*/
+	width: 228px;
+	height: 94px;
+	float: left;
+}
+#header #infoContainer
+{
+	/*border: dotted 1px red;*/
+	position: relative;
+	width: 730px;
+	height: 72px;
+	float: right;
+}
+#header #infoPanel
+{
+	/*border: dotted 1px green;*/
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	top: 60px;
+	text-align: right;
+		font-size: 11px;
+		font-weight: bold;
+		font-family: Arial;
+}
+#header #infoPanel a {
+		font-size: 11px;
+		font-weight: bold;
+		font-family: Arial;
+}
+#header #infoPanel select {
+		font-size: 11px;
+		font-weight: bold;
+		font-family: Arial;
+}
+#header #infoPanel img {
+		position: relative;
+}
+#header #navContainer
+{
+	position: relative;
+	width: 100%;
+	height: 52px;
+	background-image: url(../../images/UI/menu_background.jpg);
+	background-repeat: repeat-x;
+	z-index: 1000;
+}
+#header #navPanel
+{
+	/*border: dotted 1px yellow;*/
+	position: absolute;
+	top: 0px;
+	height: 48px;
+	margin-top: 4px;
+	float: left;
+	white-space: nowrap;
+}
+#header #navPanel #searchPanel
+{
+	position: relative;
+	float: right;
+	background-image: url(../../images/UI/menu_search.gif);
+	background-repeat: no-repeat;
+	height: 26px;
+	width: 168px;
+	margin-top: 11px;
+	margin-right: 4px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#header #navPanel #searchPanel input
+{
+	font-family: Arial;
+	font-weight: bold;
+	color: #676769;
+}
+#breadcrumb
+{
+	padding: 4px 0 4px 0;
+}
+#titleContainer
+{
+	background-color: #transparent;
+	line-height: 30px;
+}
+#titlePanel
+{
+	padding-top: 3px;
+}
+#pageHeader
+{
+	text-align: center;
+	padding: 4px;
+}
+.headerImg
+{
+	text-align: center;
+	padding: 4px;
+}
+#contentContainerMain
+{
+	width: 100%;
+	background-color: transparent;
+	background-image: url(../../images/UI/main_background.jpg);
+	background-repeat: repeat-x;
+}
+#contentContainer 
+{
+	width: 975px;
+	background-color: #ffffff;
+	border-left: 1px solid #D9D9D9;
+	border-right: 1px solid #D9D9D9;
+}
+#leftbar
+{
+	width: 250px;
+}
+#content
+{
+	background-color: #ffffff;
+	width: 725px;
+	padding: 0px 10px 10px 10px;
+}
+#homepageContent
+{
+	/*padding: 5px;*/
+	background-color: transparent;
+	background-image: url(../../images/UI/main_background.jpg);
+	background-repeat: repeat-x;
+}
+#homepageContent .bold-link 
+{
+	color: #19764A;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+#rightbar
+{
+	float: right;
+	width: 150px;
+}
+div.box
+{
+	width: 338px;
+}
+div.box .content
+{
+	padding: 8px;
+}
+div.row
+{
+	padding-top: 10px;
+}
+div.spacer
+{
+	clear: both;
+	height: 4px;
+	overflow: hidden;
+}
+.clear
+{
+	clear: both;
+}
+
+div.vlineleft
+{
+	border-left: solid 1px #000;
+	padding-left: 5px;
+}
+div.vlineright
+{
+	border-right: solid 1px #000;
+	padding-right: 5px;
+}
+div.vlineleftgray
+{
+	border-left: solid 1px gray;
+	padding-left: 5px;
+}
+div.vlinerightgray
+{
+	border-right: solid 1px gray;
+	padding-right: 5px;
+}
+
+div.mainPromo
+{
+	clear: both;
+	width: 690px;
+	background-image: url(Images/background.gif);
+	background-repeat: repeat-x;
+}
+
+div.imageDiv
+{
+	float: left;
+	width: 270px;
+	vertical-align: middle;
+}
+
+div.textDiv
+{
+	padding: 0,5px,0,15px;
+	float: right;
+	width: 420px;
+	vertical-align: middle;
+}
+
+div.smallImg
+{
+	float: left;
+	width: 115px;
+	vertical-align: middle;
+}
+
+div.bigText
+{
+	padding: 0,5px,0,5px;
+	float: right;
+	width: 570px;
+	vertical-align: middle;
+}

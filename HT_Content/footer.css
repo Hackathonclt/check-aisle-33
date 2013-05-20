@@ -1,0 +1,75 @@
+﻿#footer
+{
+	width: 100%;
+	background-color: #f9f9f9;
+}
+.footer,
+.footer UL LI,
+.footer UL LI A,
+.footer UL LI A:visited
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #101010;
+}
+.footer .group 
+{
+	width: 143px;
+	display: inline-block;
+	[if lt IE 8] zoom: 1;
+	[if lt IE 8] display: inline;
+	vertical-align: top; 
+}
+.footer UL
+{
+	width: 133px;
+	text-align: left;
+	list-style-type: none;
+	padding-left: 0px;
+	margin-left: 0px;
+	padding-right: 10px;
+}
+.footer UL LI 
+{
+	padding-left: 0px;
+	padding-top: 5px;
+	vertical-align: middle;
+}
+
+.footer UL LI.header,
+.footer UL LI.header A,
+.footer UL LI.header A:visited
+{
+	border-bottom: 1px solid #D6D6D6;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 17px;
+	font-weight: normal;
+	text-transform: none;
+	color: #6D6D6F;
+}
+.footer UL LI.special,
+.footer UL LI.special A,
+.footer UL LI.special A:visited,
+.footer TABLE TD.special,
+.footer TABLE TD.special A,
+.footer TABLE TD.special A:visited
+{
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 17px;
+	font-weight: normal;
+	text-transform: none;
+	color: #6D6D6F;
+}
+.footer UL LI.first 
+{
+	padding-top: 10px;
+}
+.footer_copyright
+{
+	color: #C5C5C5;
+	font-size: 14x;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	text-transform: none;
+}
+
